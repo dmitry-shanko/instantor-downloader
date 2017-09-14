@@ -16,6 +16,8 @@ public class InstantorDownloaderApp {
             ExcelReader excelReader = new ExcelReaderImpl();
             DownloaderService downloaderService = new DownloaderServiceImpl();
             List<Long> instantorUserDetailIds = excelReader.readInstantorUserDetailIdList(xlsx);
+            downloaderService.downloadReportsByInstantorUserDetailIds("D://instantor_reports//",
+                instantorUserDetailIds);
         } catch(Exception e) {
             e.printStackTrace();
         }

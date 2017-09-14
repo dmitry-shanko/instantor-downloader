@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface DownloaderService {
 
-    void downloadReportsByInstantorUserDetailIds(List<Long> instantorUserDetailIds);
+    void downloadReportsByInstantorUserDetailIds(String path, List<Long> instantorUserDetailIds);
 }
